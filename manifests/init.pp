@@ -28,7 +28,9 @@ class vim(
   }
 
   file { [
-    "${home_dir}/.vim",
+    # The puppetlabs/accounts module manages the .vim file resource
+    # TODO: need to make this into a conditional to handle not double managing a resource
+    # "${home_dir}/.vim",
     "${home_dir}/.vim/autoload",
     "${home_dir}/.vim/bundle",
     ] :
